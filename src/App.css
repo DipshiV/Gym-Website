@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+:root {
+  --primary-color: #8371d8;
+  --heading-color: #42526b;
+  --bg-gradient: linear-gradient(
+    90deg,
+    rgb(109, 45, 141) 27%,
+    rgb(167, 20, 241) 85%
+  );
+  --font-name: "Questrial", sans-serif;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* 
+        #9785f2
+        #b5a9f3
+        #d3cef2
+        #d7337a
+    */
 }
-
-.App-link {
-  color: #61dafb;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  font-family: var(--font-name);
+}
+html{
+  scroll-behavior: smooth;
+}
+section{
+  padding: 50px 0px;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+a:hover{
+  color: unset;
+}
+ul{
+  list-style: none;
+}
+.container{
+  width: 1140px;
+  padding: 0px 15px;
+  margin: auto;
+}
+.section_title{
+  color: var(--heading-color);
+  font-weight: 700;
 }

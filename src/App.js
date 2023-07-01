@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Hero from './components/UI/Hero';
+import Exercise from './components/UI/Exercise';
+import Start from './components/UI/Start';
+import Pricing from './components/UI/Pricing';
+import { useEffect } from 'react';
+
+import Aos from 'aos';
+
+import "swiper/css/bundle";
+import TrainerSection from './components/UI/TrainerSection';
+import Footer from './components/UI/Footer';
+import { Login } from './components/UI/Pages/Login';
+import Registration from './components/UI/Pages/Registration';
+import {RecoilRoot} from 'recoil'
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 function App() {
+  useEffect(()=>{
+  
+      Aos.init();
+    },[]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+  <BrowserRouter>
+  <Header/>
+  <Routes>
+  <Route path='/register' element={<Registration/>}/>
+  <Route path='/Login' element={<Login/>}></Route>
+  <Route path='/' element={<Hero/>}></Route>
+  <Route path='/exercise' element={<Exercise/>}/>
+  <Route path='/about' element={<Start/>}></Route>
+  <Route path='/classes' element={<TrainerSection/>}></Route>
+  <Route path='/pricing-plan' element={<Pricing/>}></Route>
+  </Routes>
+  <Footer/>
+  </BrowserRouter>
+  </RecoilRoot>
+
+    
+   
   );
 }
 
