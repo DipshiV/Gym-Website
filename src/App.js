@@ -15,6 +15,7 @@ import { Login } from './components/UI/Pages/Login';
 import Registration from './components/UI/Pages/Registration';
 import {RecoilRoot} from 'recoil'
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Navbar from './components/Header/Navbar';
 
 function App() {
   useEffect(()=>{
@@ -25,7 +26,7 @@ function App() {
   return (
     <RecoilRoot>
   <BrowserRouter>
-  <Header/>
+ <Header/>
   <Routes>
   <Route path='/register' element={<Registration/>}/>
   <Route path='/Login' element={<Login/>}></Route>

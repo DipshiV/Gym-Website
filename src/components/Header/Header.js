@@ -1,10 +1,13 @@
-import React,{useRef,useEffect} from 'react'
+import React,{useRef,useEffect,useState} from 'react'
 import {AiOutlineMenuFold} from 'react-icons/ai'
+import {CgMenu, CgCloseR} from 'react-icons/cg'
 import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import '../../styles/Header.css'
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   const navigate= useNavigate();
   const headerRef = useRef(null)
   const headerFunc = ()=>{
@@ -38,7 +41,7 @@ const handleRegister=()=>{
    </NavLink>
    {/*navigation*/}
    <div className='navigation'>
-   <ul className='menu'>
+   <ul className={isMobile ? "menu-mobile" : "menu"} onClick={() => setIsMobile(false)}>
    <li className='nav__item'>
    <NavLink to='/'>Home</NavLink>
    </li>
@@ -54,10 +57,16 @@ const handleRegister=()=>{
    <li>
    <NavLink to='/pricing-plan'>Pricing</NavLink>
    </li>
-   </ul></div>
+   </ul>
+   </div>
    <div className='nav__right'>
-   <button className='register_btn' onClick={handleRegister}>Register</button>
-  <span className='mobile_menu'><AiOutlineMenuFold/></span>
+  
+   <button className={isMobile ?'register_btn-mobile' :'register_btn'} onClick={handleRegister}>Register</button>
+  <span className='mobile_menu' onClick={()=> setIsMobile(!isMobile)}>
+  {isMobile ? 
+  <CgCloseR  className='close-outline mobile-nav-icon'/>: <AiOutlineMenuFold  className='mobile-nav-icon'/>}
+  </span>
+
    </div>
    </div>
    </div>

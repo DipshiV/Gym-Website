@@ -27,11 +27,11 @@ const Pricing = () => {
     </div>
     <div className='services'>
     <ul>
-    <li><span><RiCheckboxBlankCircleFill/></span>Unlimited access to the gym</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>Customer support</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>Personal trainer</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>regular Plans</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>5 classes per week</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Unlimited access to the gym</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Customer support</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Personal trainer</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  regular Plans</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  5 classes per week</li>
     </ul>
     <button className='register1_btn'>Join Now</button>
     </div>
@@ -47,11 +47,11 @@ const Pricing = () => {
     </div>
     <div className='services'>
     <ul>
-    <li><span><RiCheckboxBlankCircleFill/></span>Unlimited access to the gym</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>Customer support</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>Personal trainer</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>Premium Plans</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>5 classes per week</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Unlimited access to the gym</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Customer support</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Personal trainer</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Premium Plans</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  5 classes per week</li>
     </ul>
     <button className='register1_btn'>Join Now</button>
     </div>
@@ -68,11 +68,11 @@ const Pricing = () => {
     </div>
     <div className='services'>
     <ul>
-    <li><span><RiCheckboxBlankCircleFill/></span>Unlimited access to the gym</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>Customer support</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>Personal trainer</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>standard Plans</li>
-    <li><span><RiCheckboxBlankCircleFill/></span>5 classes per week</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Unlimited access to the gym</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Customer support</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  Personal trainer</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  standard Plans</li>
+    <li><span><RiCheckboxBlankCircleFill/></span>  5 classes per week</li>
     </ul>
     <button className='register1_btn'>Join Now</button>
     </div>
