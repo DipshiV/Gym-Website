@@ -22,9 +22,10 @@ const TrainerSection = () => {
     <div className='container sliders'  data-aos='fade-up'
     data-aos-duration='1800'>
     <h2 className='section__title highlights'  data-aos='fade-up'
-    data-aos-duration='1800'> Meet Our Team</h2>
+    data-aos-duration='1800'> Meet Our Diet Planner</h2>
     <p>Lorem Ipsum is simply dummy text of the <br/>
     printing and typesetting industry. </p>
+  
       <Swiper
         effect={"cards"}
         grabCursor={true}

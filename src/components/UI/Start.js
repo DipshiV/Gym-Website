@@ -9,11 +9,10 @@ const Start = () => {
     <div className='container'>
     <div className='start__wrapper'>
     <div className='react-player'>
-    <ReactPlayer  url='https://www.youtube.com/watch?v=HnoPHqrdXQ8' tytle='Gym Video' />
+    <ReactPlayer width="120%"  url='https://www.youtube.com/watch?v=HnoPHqrdXQ8' tytle='Gym Video' />
     </div>
    
 <div className='start__content' data-aos='fade-up'
-
 data-aos-duration='1800'>
 <h2 className='section__title highlights'>About Us</h2>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -39,7 +38,7 @@ Lorem Ipsum has been the industry's standard dummy text ever since the
 make a type specimen book.</p>
 </div>
 <div className='react-player1'>
- <ReactPlayer  url='https://www.youtube.com/watch?v=eaRQF-7hhmo' tytle='Gym Video' />
+ <ReactPlayer width="120%"  url='https://www.youtube.com/watch?v=eaRQF-7hhmo' tytle='Gym Video' />
  </div>
 </div>
 

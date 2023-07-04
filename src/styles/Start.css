@@ -1,11 +1,15 @@
 .start__wrapper{
     display: flex;
     justify-content: space-between;
-    column-gap: 3rem;
+    column-gap: 2rem;
     align-items: center;
+  
 }
-.react__player .start__content{
-    width: 50%;
+.Swiper .mySwiper{
+    margin-bottom: 40px;
+}
+ .start__content{
+    width: 40%;
 }
 
 .start__content h2{
@@ -41,10 +45,18 @@ margin-bottom: 20px;
         line-height: 28px;
         margin-bottom: 50px;
     }
-    .react__player1 .start__content1{
-        width: 50%;
+    .start__content1{
+        width: 40%;
+        
        
     }
+    .ReactPlayer{
+        margin-right: 20px;
+        height: 50%;
+        border: 20px solid red;
+        border-radius: 20px;
+    }
+    
     @media screen and (max-width: 780px){
         .start__wrapper{
             display: flex;

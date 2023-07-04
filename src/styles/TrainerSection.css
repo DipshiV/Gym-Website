@@ -1,6 +1,6 @@
 .sliders{
   width: 500px;  
-  height: 400px;
+  height: 300px;
 }
 .swiper-slide{
     background: #fff;
@@ -12,7 +12,7 @@
  .slide__img-06, .slide__img-07 , .slide__img-08{
 width: 100%;
 border-radius: 0.8rem;
-margin-bottom: 30px;
+
 }
 .slide__img-01{
     background:#eeeaff;
@@ -49,7 +49,7 @@ margin-bottom: 30px;
 }
 
 .slide__item h4{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: var(--heading-color);
 }
 .slide__item p{
@@ -58,7 +58,7 @@ margin-bottom: 30px;
 }
 .sliders h2{
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
    
     text-align: center;
 }

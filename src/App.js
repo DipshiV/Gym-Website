@@ -15,7 +15,13 @@ import { Login } from './components/UI/Pages/Login';
 import Registration from './components/UI/Pages/Registration';
 import {RecoilRoot} from 'recoil'
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import Navbar from './components/Header/Navbar';
+
+import Carousal from './components/UI/Pages/Carousal';
+import Trainer from './components/UI/Pages/Trainer';
+import TrainingPrograms from './components/UI/Pages/TrainingProgramSection';
+import TeamSection from './components/UI/Pages/TeamSection';
+import AboutTrainer from './components/UI/Pages/AboutTrainer';
+
 
 function App() {
   useEffect(()=>{
@@ -34,7 +40,12 @@ function App() {
   <Route path='/exercise' element={<Exercise/>}/>
   <Route path='/about' element={<Start/>}></Route>
   <Route path='/classes' element={<TrainerSection/>}></Route>
+  <Route path='/TeamSection' element={<TeamSection/>}></Route>
+  <Route path='/abouttrainer' element={<AboutTrainer/>}></Route>
+  <Route path='/TrainerProgram' element={<TrainingPrograms/>}></Route>
   <Route path='/pricing-plan' element={<Pricing/>}></Route>
+  <Route path='/blog' element={<Trainer/>}></Route>
+  <Route path='/blogs' element={<Carousal/>}/>
   </Routes>
   <Footer/>
   </BrowserRouter>

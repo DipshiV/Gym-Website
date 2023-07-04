@@ -45,15 +45,15 @@ const handleRegister=()=>{
    <li className='nav__item'>
    <NavLink to='/'>Home</NavLink>
    </li>
-   <li>
-   <NavLink to='/exercise'>Exercise</NavLink>
-   </li>
+  
    <li>
    <NavLink to='/about'>About Us</NavLink>
    </li>
+  
    <li>
-   <NavLink to='/classes'>Classes</NavLink>
+   <NavLink to='/TeamSection'>Team</NavLink>
    </li>
+   <li><NavLink to='/TrainerProgram'>TrainerProgram</NavLink></li>
    <li>
    <NavLink to='/pricing-plan'>Pricing</NavLink>
    </li>
