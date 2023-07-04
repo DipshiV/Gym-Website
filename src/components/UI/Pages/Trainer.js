@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../../../styles/Trainer.module.css"
+import styles from "../../../styles/Trainer.module.css";
 import { MdArrowForward, MdArrowBack } from "react-icons/md";
 import { useRef } from "react";
-import { data } from "../../../Data/UserDetails"
+import { data } from "../../../Data/UserDetails";
 import { useNavigate } from "react-router-dom";
 const Trainer = () => {
   const navigate = useNavigate();
@@ -22,8 +22,11 @@ const Trainer = () => {
 
   return (
     <>
-      <div className={styles.trainerContainer} data-aos='fade-up'
-      data-aos-duration='1800'>
+      <div
+        className={styles.trainerContainer}
+        data-aos="fade-up"
+        data-aos-duration="1800"
+      >
         <h1>Training Program</h1>
         <div ref={scrollRef} className={styles.slider}>
           {data.map((trainer, index) => (

@@ -13,9 +13,7 @@ import TrainerSection from './components/UI/TrainerSection';
 import Footer from './components/UI/Footer';
 import { Login } from './components/UI/Pages/Login';
 import Registration from './components/UI/Pages/Registration';
-import {RecoilRoot} from 'recoil'
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-
 import Carousal from './components/UI/Pages/Carousal';
 import Trainer from './components/UI/Pages/Trainer';
 import TrainingPrograms from './components/UI/Pages/TrainingProgramSection';
@@ -25,12 +23,11 @@ import AboutTrainer from './components/UI/Pages/AboutTrainer';
 
 function App() {
   useEffect(()=>{
-  
       Aos.init();
     },[]);
   
   return (
-    <RecoilRoot>
+    
   <BrowserRouter>
  <Header/>
   <Routes>
@@ -49,7 +46,7 @@ function App() {
   </Routes>
   <Footer/>
   </BrowserRouter>
-  </RecoilRoot>
+  
 
     
    

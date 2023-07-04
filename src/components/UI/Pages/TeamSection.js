@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "../../../styles/TeamSection.module.css"
+import style from "../../../styles/TeamSection.module.css";
 import { BsArrowRight } from "react-icons/bs";
 import { HiOutlineArrowCircleLeft } from "react-icons/hi";
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
@@ -69,19 +69,33 @@ export default function TeamSection() {
 
   return (
     <>
-    <div className={style.teamSection} data-aos='fade-up'
-    data-aos-duration='1800'>
-      <h2>Meet Our Team</h2>
-      <p data-aos='fade-up'
-      data-aos-duration='1800'>
-        We are the team of experienced people, nutrition, sports and fitness
-        passionate experts with talent and knowledge.
-      </p>
-      <div id="teamCurousel" className={style.teamCardBox}>
-        {isSample
-          ? teamData
-              .filter((x, i) => i < 4)
-              .map((item, index) => {
+      <div
+        className={style.teamSection}
+        data-aos="fade-up"
+        data-aos-duration="1800"
+      >
+        <h2>Meet Our Team</h2>
+        <p data-aos="fade-up" data-aos-duration="1800">
+          We are the team of experienced people, nutrition, sports and fitness
+          passionate experts with talent and knowledge.
+        </p>
+        <div id="teamCurousel" className={style.teamCardBox}>
+          {isSample
+            ? teamData
+                .filter((x, i) => i < 4)
+                .map((item, index) => {
+                  return (
+                    <TrainerCard
+                      key={index}
+                      trainer={item.trainer}
+                      speciality={item.speciality}
+                      imgUrl={item.imgUrl}
+                      bio={item.bio}
+                      onClick={handleAbout}
+                    />
+                  );
+                })
+            : teamData.map((item, index) => {
                 return (
                   <TrainerCard
                     key={index}
@@ -92,37 +106,25 @@ export default function TeamSection() {
                     onClick={handleAbout}
                   />
                 );
-              })
-          : teamData.map((item, index) => {
-              return (
-                <TrainerCard
-                  key={index}
-                  trainer={item.trainer}
-                  speciality={item.speciality}
-                  imgUrl={item.imgUrl}
-                  bio={item.bio}
-                  onClick={handleAbout}
-                />
-              );
-            })}
+              })}
+        </div>
+        <div className={style.buttonSection}>
+          <HiOutlineArrowCircleLeft
+            className={style.navBtn}
+            style={{ display: isSample && "none" }}
+            onClick={prev}
+          />
+          <button id={style.teamBtn} onClick={() => setIsSample(!isSample)}>
+            {isSample ? "SEE THE WHOLE TEAM" : "SHOW LESS"}
+          </button>
+          <HiOutlineArrowCircleRight
+            className={style.navBtn}
+            style={{ display: isSample && "none" }}
+            onClick={next}
+          />
+        </div>
       </div>
-      <div className={style.buttonSection}>
-        <HiOutlineArrowCircleLeft
-          className={style.navBtn}
-          style={{ display: isSample && "none" }}
-          onClick={prev}
-        />
-        <button id={style.teamBtn} onClick={() => setIsSample(!isSample)}>
-          {isSample ? "SEE THE WHOLE TEAM" : "SHOW LESS"}
-        </button>
-        <HiOutlineArrowCircleRight
-          className={style.navBtn}
-          style={{ display: isSample && "none" }}
-          onClick={next}
-        />
-      </div>
-    </div>
-    <TrainerSection/>
+      <TrainerSection />
     </>
   );
 }

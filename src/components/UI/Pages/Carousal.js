@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../../../styles/Carousal.module.css"
-import  {data } from "../../../Data/UserDetails"
+import styles from "../../../styles/Carousal.module.css";
+import { data } from "../../../Data/UserDetails";
 const Carousal = () => {
   return (
     <>

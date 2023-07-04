@@ -52,37 +52,45 @@ export default function TrainingPrograms() {
     },
   ];
 
-  return (<>
-    <Trainer/>
-    <Exercise/>
-    <div className={styles.carouselContainer} data-aos='fade-up'
-    data-aos-duration='1800'>
-      <div id={styles.carouselText} data-aos='fade-up'
-      data-aos-duration='1800'>Top Notch Facilities</div>
-      <p data-aos='fade-up'
-      data-aos-duration='1800'>
-        I'm a paragraph. Click here to add your own text and edit me. I’m a
-        great place for you to tell a story and let your users know a little
-        more about you.
-      </p>
-      <div id="curousel" className={styles.carousel}>
-        {trainingData.map((item, index) => {
-          return (
-            <TrainingTypeCard
-              key={index}
-              type={trainingData[index].type}
-              imgUrl={trainingData[index].imgUrl}
-            />
-          );
-        })}
+  return (
+    <>
+      <Trainer />
+      <Exercise />
+      <div
+        className={styles.carouselContainer}
+        data-aos="fade-up"
+        data-aos-duration="1800"
+      >
+        <div
+          id={styles.carouselText}
+          data-aos="fade-up"
+          data-aos-duration="1800"
+        >
+          Top Notch Facilities
+        </div>
+        <p data-aos="fade-up" data-aos-duration="1800">
+          I'm a paragraph. Click here to add your own text and edit me. I’m a
+          great place for you to tell a story and let your users know a little
+          more about you.
+        </p>
+        <div id="curousel" className={styles.carousel}>
+          {trainingData.map((item, index) => {
+            return (
+              <TrainingTypeCard
+                key={index}
+                type={trainingData[index].type}
+                imgUrl={trainingData[index].imgUrl}
+              />
+            );
+          })}
+        </div>
+        {/* <ContainedButton /> */}
+        <div className={styles.curouselNav}>
+          <HiOutlineArrowCircleLeft className={styles.navBtn} onClick={prev} />
+          <div>View All</div>
+          <HiOutlineArrowCircleRight className={styles.navBtn} onClick={next} />
+        </div>
       </div>
-      {/* <ContainedButton /> */}
-      <div className={styles.curouselNav}>
-        <HiOutlineArrowCircleLeft className={styles.navBtn} onClick={prev} />
-        <div>View All</div>
-        <HiOutlineArrowCircleRight className={styles.navBtn} onClick={next} />
-      </div>
-    </div>
     </>
   );
 }

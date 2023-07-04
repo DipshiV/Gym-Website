@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Styles from "../../../styles/Registration.module.css"
-import { checkLogin } from "./isLoginAtom";
-import { useRecoilState } from "recoil";
+import Styles from "../../../styles/Registration.module.css";
+
+
 
 import { useNavigate } from "react-router-dom";
 
@@ -11,8 +11,6 @@ export default function Registration() {
   const [userDetails, setUserDetails] = useState(initialData);
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [isLogin, setIsLogin] = useRecoilState(checkLogin);
-
   function handleChange(e) {
     const { name, value } = e.target;
     setUserDetails({ ...userDetails, [name]: value });
@@ -23,11 +21,8 @@ export default function Registration() {
     e.preventDefault();
     setErrors(validation(userDetails));
     setIsSubmit(true);
-    setIsLogin(true);
-
     if (Object.keys(errors).length === 0 && isSubmit) {
       navigate("/");
-      setIsLogin(true);
     }
   }
   useEffect(() => {

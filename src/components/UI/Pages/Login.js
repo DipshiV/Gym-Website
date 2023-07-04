@@ -2,26 +2,16 @@ import React, { useState } from "react";
 import Styles from "../../../styles/Registration.module.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { onLoginName } from "./isLoginAtom";
-import { useRecoilState } from "recoil";
-import { checkLogin } from "./isLoginAtom";
-
 export function Login() {
   let navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const registerData = JSON.parse(localStorage.getItem("details"));
-  const [change, setChange] = useRecoilState(onLoginName);
-  const [isLogin, setIsLogin] = useRecoilState(checkLogin);
-  // console.log(typeof(registerData.email))
-
   function handleSubmit(e) {
     e.preventDefault();
     if (email == registerData.email && password == registerData.password) {
       window.alert(`Hiiii ${registerData.username}`);
       navigate("/");
-      setIsLogin(false);
-      setChange(`Hi, ${registerData.username}`);
     }
     if (password != registerData.password || email != registerData.email) {
       window.alert("Email or Password is incorrect");
